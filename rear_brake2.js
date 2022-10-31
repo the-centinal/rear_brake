@@ -51,7 +51,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 }
             };
             loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
-            import Chart from loadscript;
+            
             const myChart = new Chart(
                 document.getElementById('myChart'),
                 config
