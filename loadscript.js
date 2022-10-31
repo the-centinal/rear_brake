@@ -1,5 +1,5 @@
 
-const loadScript = (window, url) => {
+export default const loadScript = (window, url) => {
     return new Promise(async (resolve, reject) => {
         try {
             const script = window.document.createElement("script");
@@ -14,4 +14,4 @@ const loadScript = (window, url) => {
     });
 }
 
-export default loadScript
+
