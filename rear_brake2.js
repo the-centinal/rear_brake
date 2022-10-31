@@ -1,4 +1,4 @@
-import loadScript from "./loadscript";
+import loadScript from "./loadscript.js";
 
 const plugin = ({ widgets, simulator, vehicle }) => {
     widgets.register("rearbrake", (box) => {
