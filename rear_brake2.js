@@ -54,7 +54,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
             
             const myChart = new Chart(
 //                 document.getElementById('myChart'),
-              div.querySelector(`myChart`),
+              div.querySelector("myChart"),
                 config
             );
             box.injectNode(div)
