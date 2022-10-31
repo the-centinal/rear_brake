@@ -13,4 +13,4 @@ const loadScript = (window, url) => {
     });
 }
 
-exports default loadScript;
+exports loadScript;
