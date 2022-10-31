@@ -1,3 +1,4 @@
+
 const loadScript = (window, url) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -13,4 +14,4 @@ const loadScript = (window, url) => {
     });
 }
 
-exports loadScript;
+export default loadScript
