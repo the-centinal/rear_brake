@@ -13,26 +13,25 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 </div>
             </div>`)
 
-            var i = 0;
-            var x_co = [0, 5, 10, 15, 20, 25, 30];
-            var j = 0;
-            var y_co = [0, 15, 30, 47, 50, 45, 30]
-            const labels = x_co
+                var x_co = [0, 5, 10, 15, 20, 25, 30];
+            var y_co = [0, 15, 30, 47, 50, 45, 30];
 
 
-            const data = {
-                labels: labels,
-                datasets: [{
-                    label: 'Rear Brake Temperature',
-                    backgroundColor: '#34d2eb',
-                    borderColor: '#34d2eb',
-                    data: y_co
-                }]
-            };
+            loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
+            const ctx =  div.querySelector("#myChart");
+            const myChart  = new Chart(ctx, {
 
-            const config = {
                 type: 'line',
-                data: data,
+                data : {
+                    labels: x_co,
+                    datasets: [{
+                        label: 'Rear Brake Temperature',
+                        backgroundColor: '#34d2eb',
+                        borderColor: '#34d2eb',
+                        data: y_co
+                    }]
+                },
+
                 options: {
                     scales: {
                         y: {
@@ -50,16 +49,10 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                         }
                     }
                 }
-            };
-            loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
-            
-            const myChart = new Chart(
-//                 document.getElementById('myChart'),
-              div.querySelector("#myChart"),
-                config
-            );
+
+            })
             box.injectNode(div)
-console.log("all good");
+        
             
         }
 
