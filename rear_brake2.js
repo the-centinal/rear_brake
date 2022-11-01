@@ -61,18 +61,23 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
             return () => {
 
-                clearInterval(intervalId)
-                const myChart = new Chart(
-
-                    div.querySelector("#myChart"),
-                    config
-                );
+                boxGlobal = null
+                // Deactivation function for clearing intervals or such.
             }
-   
+        });
+        
+        return () => {
+
+            clearInterval(intervalId)
+            const myChart = new Chart(
+
+                div.querySelector("#myChart"),
+                config
+            );
+        }
 
 };
 
 export default plugin
-
 
 
