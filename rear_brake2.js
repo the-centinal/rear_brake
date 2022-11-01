@@ -52,20 +52,23 @@ const plugin = ({ widgets, simulator, vehicle }) => {
         };
         loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
 
-        const myChart = new Chart(
-
-            div.querySelector("#myChart"),
-            config
-        );
-        box.injectNode(div);
+        
         console.log("all good");
         return () => {
-            boxGlobal = null
+            const myChart = new Chart(
+
+                div.querySelector("#myChart"),
+                config
+            );
+            box.injectNode(div);
+            // boxGlobal = null
             // Deactivation function for clearing intervals or such.
         }
     });
 
 };
+
+export default plugin
 
 export default plugin
 
