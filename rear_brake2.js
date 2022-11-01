@@ -56,7 +56,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                     }
                 }
             };
-            loadScript(box.window.Chart, "https://cdn.jsdelivr.net/npm/chart.js")
+            loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
           const myChart = new Chart(
 
                 div.querySelector("#myChart"),
