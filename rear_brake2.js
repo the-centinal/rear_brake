@@ -70,7 +70,5 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
 export default plugin
 
-export default plugin
-
 
 
