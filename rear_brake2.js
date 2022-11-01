@@ -1,7 +1,7 @@
 
 import loadScript from "./loadscript.js";
 const plugin = ({ widgets, simulator, vehicle }) => {
-    return (box) => {
+
 
 
         const div = document.createElement("div");
@@ -68,7 +68,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
             }
            
         });
-    }
+
 
 };
 
