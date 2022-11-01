@@ -118,7 +118,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
             return () => {
 
-                boxGlobal = null
+                box = null
                 // Deactivation function for clearing intervals or such.
             }
         });
