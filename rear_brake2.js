@@ -24,14 +24,14 @@ const plugin = ({ widgets, simulator, vehicle }) => {
            
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
-            var y_co = [0, 15, 30, 47, 50, 45, 30]
+            var y_co = [0, 15, 40, 25, 0, 30, 50]
 
 
 
             const data = {
                 labels: x_co,
                 datasets: [{
-                    label: 'Rear Brake Temperature',
+                    label: 'Speed of Vehicle',
                     backgroundColor: '#34d2eb',
                     borderColor: '#34d2eb',
                     data: y_co
@@ -46,13 +46,13 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                         y: {
                             title: {
                                 display: true,
-                                text: 'Temp (in °C)'
+                                text: 'in Km/hr'
                             }
                         },
                         x: {
                             title: {
                                 display: true,
-                                text: 'Time (in mins.)'
+                                text: 'Time (in hrs)'
 
                             }
                         }
