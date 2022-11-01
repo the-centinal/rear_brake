@@ -53,7 +53,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
         loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
 
         
-        console.log("all good");
+ 
         return () => {
             const myChart = new Chart(
 
@@ -61,6 +61,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 config
             );
             box.injectNode(div);
+              console.log("all good");
             // boxGlobal = null
             // Deactivation function for clearing intervals or such.
         }
