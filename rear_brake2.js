@@ -12,9 +12,9 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
             div.innerHTML = (`
            
-              <div class="speed-chart" style="height:280px !important; width: 280px !important;">
+              <div class="speed-chart" style="height:280px !important; width: 560px !important;">
                   <div>
-                  <canvas id="myChart" style="height:280px !important; width: 280px !important;"></canvas>
+                  <canvas id="myChart" style="height:280px !important; width: 560px !important;"></canvas>
                   </div>
               </div>`);
 
