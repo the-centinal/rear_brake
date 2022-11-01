@@ -22,7 +22,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
            setInterval(function() {
              console.log("inside setinterval")
            
-            var x_co = [0, 5, 10, 15, 20, 25, 30];
+            var x_co = [0, 4, 8, 12, 16, 20, 24];
 
             var y_co = [0, 15, 40, 25, 0, 30, 50]
 
@@ -46,7 +46,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                         y: {
                             title: {
                                 display: true,
-                                text: 'in Km/hr'
+                                text: 'Speed in Km/hr'
                             }
                         },
                         x: {
