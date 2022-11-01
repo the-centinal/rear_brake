@@ -1,16 +1,21 @@
 
 import loadScript from "./loadscript.js";
 const plugin = ({ widgets, simulator, vehicle }) => {
-
+  
 
 
         const div = document.createElement("div");
-               div.innerHTML = (`
+
+
+        widgets.register("rearbrake", function (box, msg) {
+            div.innerHTML = (`
               <div class="speed-chart" style="height:280px !important; width: 280px !important;">
                   <div>
                   <canvas id="myChart" style="height:280px !important; width: 280px !important;"></canvas>
                   </div>
               </div>`);
+
+
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
             var y_co = [0, 15, 30, 47, 50, 45, 30]
@@ -49,28 +54,21 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 }
             };
             loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
-            const myChart = new Chart(
-
-                div.querySelector("#myChart"),
-                config
-            );
-            let boxGlobal = null
-
-        widgets.register("rearbrake", function (box, msg) {
-     
-
-
-
+       
             box.injectNode(div);
 
             console.log("all good");
 
             return () => {
-                clearInterval(intervalId)
-            }
-           
-        });
 
+                clearInterval(intervalId)
+                const myChart = new Chart(
+
+                    div.querySelector("#myChart"),
+                    config
+                );
+            }
+   
 
 };
 
