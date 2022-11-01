@@ -62,7 +62,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 div.querySelector("#myChart"),
                 config
             );
-            div.injectNode(div);
+            box.injectNode(div);
 
             console.log("all good");
 
