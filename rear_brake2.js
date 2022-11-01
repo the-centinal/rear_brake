@@ -18,6 +18,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                   </div>
               </div>`);
 
+          
 
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
@@ -57,9 +58,10 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 }
             };
             loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
+          
           const myChart = new Chart(
 
-                document.querySelector("#myChart"),
+                div.querySelector("#myChart"),
                 config
             );
             box.injectNode(div);
