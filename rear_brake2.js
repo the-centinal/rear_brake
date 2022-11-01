@@ -4,7 +4,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
   
 
 
-        const div = document.createElement("div");
+   
 
 
         widgets.register("rearbrake", function (box, msg) {
