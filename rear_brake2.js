@@ -21,8 +21,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
          if(div.querySelectorAll("#myChart").length > 0 ){
            setInterval(function() {
              console.log("inside setinterval")
-             var speed = Vehicle.Speed;
-             console.log(speed);
+           
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
             var y_co = [0, 15, 30, 47, 50, 45, 30]
