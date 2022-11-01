@@ -20,6 +20,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
          if(div.querySelectorAll("#myChart").length > 0 ){
            setInterval(function() {
+             console.log("inside setinterval")
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
             var y_co = [0, 15, 30, 47, 50, 45, 30]
@@ -56,7 +57,14 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                         }
                     }
                 }
-            };}, 1000)
+            };
+            loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
+          
+          const myChart = new Chart(
+
+                div.querySelector("#myChart"),
+                config
+            );}, 1000)
          };
          
 
@@ -97,13 +105,13 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 //                     }
 //                 }
 //             };
-            loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
+//             loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
           
-          const myChart = new Chart(
+//           const myChart = new Chart(
 
-                div.querySelector("#myChart"),
-                config
-            );
+//                 div.querySelector("#myChart"),
+//                 config
+//             );
             box.injectNode(div);
 
             console.log("all good");
