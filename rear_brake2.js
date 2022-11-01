@@ -54,6 +54,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 div.querySelector("#myChart"),
                 config
             );
+            let boxGlobal = null
 
         widgets.register("rearbrake", function (box, msg) {
      
