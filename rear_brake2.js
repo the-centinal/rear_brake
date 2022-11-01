@@ -57,7 +57,11 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 }
             };
             loadScript(box.window, "https://cdn.jsdelivr.net/npm/chart.js")
-       
+          const myChart = new Chart(
+
+                div.querySelector("#myChart"),
+                config
+            );
             box.injectNode(div);
 
             console.log("all good");
@@ -68,16 +72,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 // Deactivation function for clearing intervals or such.
             }
         });
-        
-        return () => {
-
-            clearInterval(intervalId)
-            const myChart = new Chart(
-
-                div.querySelector("#myChart"),
-                config
-            );
-        }
+  
 
 };
 
