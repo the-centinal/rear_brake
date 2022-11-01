@@ -8,7 +8,10 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
 
         widgets.register("rearbrake", function (box, msg) {
+           const div = document.createElement("div");
+
             div.innerHTML = (`
+            <div>hello world</div>
               <div class="speed-chart" style="height:280px !important; width: 280px !important;">
                   <div>
                   <canvas id="myChart" style="height:280px !important; width: 280px !important;"></canvas>
