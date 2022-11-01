@@ -11,10 +11,10 @@ const plugin = ({ widgets, simulator, vehicle }) => {
            const div = document.createElement("div");
 
             div.innerHTML = (`
-            <div>hello world</div>
+           
               <div class="speed-chart" style="height:280px !important; width: 280px !important;">
-                  <div>
-                  <div id="myChart" style="height:280px !important; width: 280px !important;"></div>
+                  <div>graph
+                  <canvas id="myChart" style="height:280px !important; width: 280px !important;"> line chart</canvas>
                   </div>
               </div>`);
 
