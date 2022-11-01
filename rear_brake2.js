@@ -18,7 +18,7 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                   </div>
               </div>`);
 
-          
+         console.log(div.querySelectorAll("#myChart").length);
 
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
