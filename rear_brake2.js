@@ -5,17 +5,12 @@ const plugin = ({ widgets, simulator, vehicle }) => {
 
 
         const div = document.createElement("div");
-
-
-        widgets.register("rearbrake", function (box, msg) {
-            div.innerHTML = (`
+               div.innerHTML = (`
               <div class="speed-chart" style="height:280px !important; width: 280px !important;">
                   <div>
                   <canvas id="myChart" style="height:280px !important; width: 280px !important;"></canvas>
                   </div>
               </div>`);
-
-
             var x_co = [0, 5, 10, 15, 20, 25, 30];
 
             var y_co = [0, 15, 30, 47, 50, 45, 30]
@@ -59,6 +54,12 @@ const plugin = ({ widgets, simulator, vehicle }) => {
                 div.querySelector("#myChart"),
                 config
             );
+
+        widgets.register("rearbrake", function (box, msg) {
+     
+
+
+
             box.injectNode(div);
 
             console.log("all good");
